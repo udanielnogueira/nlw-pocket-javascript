@@ -1,0 +1,5 @@
+- [x] Criar metas
+- [x] Listar metas
+- [x] Marcar/Desmarcar metas
+- [] Remover metas
+- [] Sistemas de mensagens
