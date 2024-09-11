@@ -1,4 +1,4 @@
-const { select, input } = require("@inquirer/prompts"); // Usa somente o select do prompts
+const { select, input, checkbox } = require("@inquirer/prompts"); // Usa somente o select do prompts
 
 let meta = {
   value: "Tomar 2l de água por dia",
@@ -17,6 +17,29 @@ const cadastrarMeta = async () => {
 
   metas.push({ value: meta, checked: false });
 }; // Toda função async tem um await
+
+const listarMetas = async () => {
+  const respostas = await checkbox({
+    message:
+      "Use as SETAS para mudar de meta, o ESPAÇO para marcar ou desmarcar e o ENTER para finalizar a etapa",
+    choices: [...metas],
+  });
+
+  if (respostas == 0) {
+    console.log("Nenhuma meta selecionada");
+    return;
+  }
+
+  respostas.forEach((resposta) => {
+    const meta = metas.find((m) => {
+      return m.value == resposta;
+    });
+
+    meta.checked = true;
+  });
+
+  console.log("Metas concluídas");
+};
 
 const start = async () => {
   while (true) {
@@ -45,6 +68,7 @@ const start = async () => {
         console.log(metas.reverse());
         break;
       case "listar":
+        await listarMetas();
         console.log(metas);
         break;
       case "sair":
