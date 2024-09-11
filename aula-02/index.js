@@ -23,12 +23,17 @@ const listarMetas = async () => {
     message:
       "Use as SETAS para mudar de meta, o ESPAÇO para marcar ou desmarcar e o ENTER para finalizar a etapa",
     choices: [...metas],
+    instructions: false,
   });
 
-  if (respostas == 0) {
+  if (respostas.length == 0) {
     console.log("Nenhuma meta selecionada");
     return;
   }
+
+  metas.forEach((m) => {
+    m.checked = false;
+  });
 
   respostas.forEach((resposta) => {
     const meta = metas.find((m) => {
@@ -38,7 +43,7 @@ const listarMetas = async () => {
     meta.checked = true;
   });
 
-  console.log("Metas concluídas");
+  console.log("Metas marcadas como concluídas");
 };
 
 const start = async () => {
@@ -65,7 +70,7 @@ const start = async () => {
     switch (opcao) {
       case "cadastrar":
         await cadastrarMeta();
-        console.log(metas.reverse());
+        console.log(metas);
         break;
       case "listar":
         await listarMetas();
