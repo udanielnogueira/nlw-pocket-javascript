@@ -39,8 +39,7 @@ const listarMetas = async () => {
   }
 
   const respostas = await checkbox({
-    message:
-      "Use as SETAS para mudar de meta, o ESPAÇO para marcar ou desmarcar e o ENTER para finalizar a etapa",
+    message: "ESPAÇO marcar/desmarcar | ENTER finalizar",
     choices: [...metas],
     instructions: false,
   });
@@ -159,24 +158,24 @@ const start = async () => {
       message: "Menu >",
       choices: [
         {
-          name: "Cadastrar meta",
+          name: "Nova meta",
           value: "cadastrar",
-        },
-        {
-          name: "Listar metas",
-          value: "listar",
-        },
-        {
-          name: "Metas realizadas",
-          value: "realizadas",
-        },
-        {
-          name: "Metas abertas",
-          value: "abertas",
         },
         {
           name: "Deletar metas",
           value: "deletar",
+        },
+        {
+          name: "Ver/Concluir metas",
+          value: "listar",
+        },
+        {
+          name: "Exibir metas abertas",
+          value: "abertas",
+        },
+        {
+          name: "Exibir Metas realizadas",
+          value: "realizadas",
         },
         {
           name: "Sair",

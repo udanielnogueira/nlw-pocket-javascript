@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "value": "Noite de cinema",
+    "checked": true
+  },
+  {
+    "value": "Estudar JavaScript",
+    "checked": true
+  },
+  {
+    "value": "Beber 2l de água por dia",
+    "checked": true
+  },
+  {
+    "value": "Ler um livro",
+    "checked": true
+  },
+  {
+    "value": "Passear com o cachorro",
+    "checked": true
+  }
+]
