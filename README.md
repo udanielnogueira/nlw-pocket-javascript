@@ -9,6 +9,12 @@
 <img src="https://img.shields.io/github/last-commit/udanielnogueira/nlw-pocket-javascript">
 </div>
 
+## Tecnologias
+
+- JavaScript
+- Node.js
+- JSON
+
 ## Preview
 
 ![Preview do projeto](assets/img/screenshot-1.png "Gerenciador de Metas Preview")
@@ -18,9 +24,3 @@
 ![Preview do projeto](assets/img/screenshot-3.png "Gerenciador de Metas Preview")
 
 ![Preview do projeto](assets/img/screenshot-4.png "Gerenciador de Metas Preview")
-
-## Tecnologias
-
-- JavaScript
-- Node.js
-- JSON
